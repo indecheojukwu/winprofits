@@ -215,9 +215,43 @@
                             <div class="hfm-visual" style="position: relative;">
                                 <img src="assets/img/hfm.png" alt="HFM Trading Platform" class="img-fluid" style="border-radius: 10px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);margin-top: -120px;">
 
-                                <a href="http://register.hfm.com/ke/en/new-live-account/?refid=30471454" style="text-decoration: none; color: inherit; position: absolute; bottom: -30px; left: 10%; width: 80%;">
-                                    <div class="hfm-card" 
-                                        onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.borderRadius='30px 10px'; this.style.boxShadow='0 15px 30px rgba(212, 175, 55, 0.3)';" 
+                                <style>
+                                /* Gold Pulse Animation */
+                                @keyframes pulse-gold {
+                                0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
+                                70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+                                100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+                                }
+
+                                /* Shimmer effect for the card */
+                                .hfm-shimmer {
+                                    position: relative;
+                                    overflow: hidden;
+                                    animation: pulse-gold 2s infinite;
+                                }
+
+                                .hfm-shimmer::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: -50%;
+                                    left: -60%;
+                                    width: 30%;
+                                    height: 200%;
+                                    background: rgba(255, 255, 255, 0.4);
+                                    transform: rotate(30deg);
+                                    animation: shimmer-gold 4s infinite;
+                                }
+
+                                @keyframes shimmer-gold {
+                                0% { left: -60%; }
+                                30% { left: 130%; } /* Faster sweep, then a pause */
+                                100% { left: 130%; }
+                                }
+                                </style>
+
+                                <a href="http://register.hfm.com/ke/en/new-live-account/?refid=30471454" style="text-decoration: none; color: inherit; position: absolute; bottom: -30px; left: 10%; width: 80%; z-index: 10;">
+                                    <div class="hfm-card hfm-shimmer" 
+                                        onmouseover="this.style.transform='translateY(-10px) scale(1.02)'; this.style.borderRadius='30px 10px'; this.style.boxShadow='0 20px 40px rgba(212, 175, 55, 0.4)';" 
                                         onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.borderRadius='8px'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.4)';"
                                         style="
                                         background: #d4af37; 
@@ -226,9 +260,11 @@
                                         border-radius: 8px; 
                                         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                                         cursor: pointer;
-                                        text-align: center;">
-                                        <h4 style="margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">Open HFM Elite Account</h4>
-                                        <p style="margin: 5px 0 0; font-size: 0.9rem; font-weight: 600; opacity: 0.8;">Secure your 100% credit bonus today →</p>
+                                        text-align: center;
+                                        border: 1px solid rgba(255,255,255,0.3);
+                                        ">
+                                        <h4 style="margin: 0; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;">Open HFM Elite Account</h4>
+                                        <p style="margin: 5px 0 0; font-size: 0.9rem; font-weight: 700; opacity: 0.9; white-space: nowrap;">Secure your 100% credit bonus today →</p>
                                     </div>
                                 </a>
                             </div>
@@ -271,15 +307,63 @@
 
                                 <p class="lead-text">Whether you are trading 24/7 Synthetic Indices (Volatility, Crash/Boom) or standard Forex pairs, Deriv provides the lowest spreads and lightning-fast execution. With over 20 years of market presence, they offer the security and reliability required for the Wins&Profits strategy to succeed.</p>
 
+                                <style>
+                                /* Deriv Red Pulse Animation */
+                                @keyframes pulse-deriv {
+                                0% { box-shadow: 0 0 0 0 rgba(254, 68, 78, 0.7); }
+                                70% { box-shadow: 0 0 0 20px rgba(254, 68, 78, 0); }
+                                100% { box-shadow: 0 0 0 0 rgba(254, 68, 78, 0); }
+                                }
+
+                                /* Shimmer effect for Deriv button */
+                                .deriv-unmissable {
+                                    position: relative;
+                                    overflow: hidden;
+                                    animation: pulse-deriv 2s infinite;
+                                }
+
+                                .deriv-unmissable::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: -50%;
+                                    left: -60%;
+                                    width: 25%;
+                                    height: 200%;
+                                    background: rgba(255, 255, 255, 0.3);
+                                    transform: rotate(30deg);
+                                    animation: shimmer-deriv 3.5s infinite;
+                                }
+
+                                @keyframes shimmer-deriv {
+                                0% { left: -60%; }
+                                30% { left: 130%; }
+                                100% { left: 130%; }
+                                }
+                                </style>
+
                                 <a href="https://track.deriv.be/_aZPvfziYVLg5TVC3w-F7AGNd7ZgqdRLk/1/?fbclid=PAZXh0bgNhZW0CMTEAAaf6CIosls7uqHjVPmD4hSjqJmTzAQin9wlmpjS5Aj-u5OwwCtqw5JKl4gOoVw_aem_ajDELZga0OTYTcfzN1Uvyg" 
-                                    class="btn btn-cta" 
-                                    onmouseover="this.style.transform='scale(1.05) translateY(-3px)'; this.style.borderRadius='15px 40px'; this.style.backgroundColor='#111111'; this.style.boxShadow='0 20px 40px rgba(254, 68, 78, 0.3)';" 
-                                    onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.borderRadius='8px'; this.style.backgroundColor='#FE444E'; this.style.boxShadow='0 10px 20px rgba(254, 68, 78, 0.2)';"
+                                    class="btn btn-cta deriv-unmissable" 
+                                    onmouseover="this.style.transform='scale(1.08) translateY(-4px)'; this.style.borderRadius='15px 40px'; this.style.backgroundColor='#111111'; this.style.color='#FE444E';" 
+                                    onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.borderRadius='8px'; this.style.backgroundColor='#FE444E'; this.style.color='#ffffff';"
                                     style="
-                                    background: #FE444E; color: #ffffff; padding: 16px 42px; border-radius: 8px; text-decoration: none; font-weight: 900; border: 2px solid #FE444E; box-shadow: 0 10px 20px rgba(254, 68, 78, 0.2); 
-                                    display: inline-flex; align-items: center; gap: 10px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.95rem; "> 
+                                    background: #FE444E; 
+                                    color: #ffffff; 
+                                    padding: 20px 50px; /* Increased size */
+                                    border-radius: 8px; 
+                                    text-decoration: none; 
+                                    font-weight: 900; 
+                                    border: 2px solid #FE444E; 
+                                    display: inline-flex; 
+                                    align-items: center; 
+                                    gap: 12px; 
+                                    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+                                    text-transform: uppercase; 
+                                    letter-spacing: 2px; 
+                                    font-size: 1.05rem; /* Slightly larger text */
+                                    white-space: nowrap; 
+                                    "> 
                                     <span>Start Trading Synthetics</span>
-                                    <i class="bi bi-graph-up-arrow" style="font-size: 1.1rem;"></i>
+                                    <i class="bi bi-graph-up-arrow" style="font-size: 1.2rem; flex-shrink: 0;"></i>
                                 </a>
 
                             </div>
@@ -363,12 +447,64 @@
                                 </ul>
 
                                 <div class="cta-wrapper" style="margin-top: 30px;">
-                                    <a href="https://secure.scopemarkets.com/en/register/?brd=1&sidc=36FCDC0F-3B0A-4B0B-AAEB-4BD52F273780" class="btn btn-cta" 
-                                        onmouseover="this.style.transform='scale(1.05)'; this.style.borderRadius='15px 40px 15px 40px'; this.style.boxShadow='0 10px 30px rgba(58, 134, 255, 0.4)';" 
-                                        onmouseout="this.style.transform='scale(1)'; this.style.borderRadius='50px'; this.style.boxShadow='0 10px 20px rgba(58, 134, 255, 0.2)';"
-                                        style=" background: #111111; color: white; padding: 14px 35px; border-radius: 50px; text-decoration: none; 
-                                        font-weight: 700; border: 2px solid #3a86ff; box-shadow: 0 10px 20px rgba(58, 134, 255, 0.2); display: inline-block; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                                        text-transform: uppercase; letter-spacing: 1px; "> Open Your Elite Account </a>
+                                    <style>
+                                    /* Scope Blue Pulse Animation */
+                                    @keyframes pulse-scope {
+                                    0% { box-shadow: 0 0 0 0 rgba(58, 134, 255, 0.7); }
+                                    70% { box-shadow: 0 0 0 20px rgba(58, 134, 255, 0); }
+                                    100% { box-shadow: 0 0 0 0 rgba(58, 134, 255, 0); }
+                                    }
+
+                                    /* Shimmer effect for Scope button */
+                                    .scope-unmissable {
+                                        position: relative;
+                                        overflow: hidden;
+                                        animation: pulse-scope 2s infinite;
+                                    }
+
+                                    .scope-unmissable::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: -50%;
+                                        left: -60%;
+                                        width: 25%;
+                                        height: 200%;
+                                        background: rgba(255, 255, 255, 0.3);
+                                        transform: rotate(30deg);
+                                        animation: shimmer-scope 3.5s infinite;
+                                    }
+
+                                    @keyframes shimmer-scope {
+                                    0% { left: -60%; }
+                                    30% { left: 130%; }
+                                    100% { left: 130%; }
+                                    }
+                                    </style>
+
+                                    <a href="https://secure.scopemarkets.com/en/register/?brd=1&sidc=36FCDC0F-3B0A-4B0B-AAEB-4BD52F273780" 
+                                        class="btn btn-cta scope-unmissable" 
+                                        onmouseover="this.style.transform='scale(1.08) translateY(-4px)'; this.style.borderRadius='15px 40px'; this.style.backgroundColor='#111111'; this.style.color='#3a86ff';" 
+                                        onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.borderRadius='8px'; this.style.backgroundColor='#3a86ff'; this.style.color='#ffffff';"
+                                        style="
+                                        background: #3a86ff; 
+                                        color: #ffffff; 
+                                        padding: 20px 50px; 
+                                        border-radius: 8px; 
+                                        text-decoration: none; 
+                                        font-weight: 900; 
+                                        border: 2px solid #3a86ff; 
+                                        display: inline-flex; 
+                                        align-items: center; 
+                                        gap: 12px; 
+                                        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+                                        text-transform: uppercase; 
+                                        letter-spacing: 2px; 
+                                        font-size: 1.05rem;
+                                        white-space: nowrap; 
+                                        "> 
+                                        <span>Open Elite Account</span>
+                                        <i class="bi bi-shield-check" style="font-size: 1.2rem; flex-shrink: 0;"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
