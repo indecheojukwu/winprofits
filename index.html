@@ -59,33 +59,98 @@
 
                         <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
                             <div class="hero-content">
-                                <style>.hero-title {
+                                <style>
+                                .hero-title {
                                     font-family: 'Montserrat', sans-serif;
                                     font-size: 3.5rem;
                                     color: #f8fafc;
                                     line-height: 1.2;
                                 }
 
-                                /* Add a span around Wins&Profits for this effect */
                                 .highlight {
-                                    color: #22c55e; /* Success Green */
+                                    color: #22c55e;
                                     text-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
-                                }</style>
-                                <h1 class="hero-title">Wins&Profits: Elevating Your Trading Journey</h1>
-                                <p class="hero-description">We provide elite trading insights and professional guidance to help you navigate the financial markets. Partner with our trusted affiliates to start maximizing your portfolio today.</p>
+                                }
+
+                                /* The "Unmissable" Animation */
+                                @keyframes pulse-blue {
+                                0% { box-shadow: 0 0 0 0 rgba(36, 160, 223, 0.7); }
+                                70% { box-shadow: 0 0 0 20px rgba(36, 160, 223, 0); }
+                                100% { box-shadow: 0 0 0 0 rgba(36, 160, 223, 0); }
+                                }
+
+                                .btn-unmissable {
+                                    animation: pulse-blue 2s infinite;
+                                    position: relative;
+                                    overflow: hidden;
+                                }
+
+                                /* Shimmer effect overlay */
+                                .btn-unmissable::after {
+                                    content: '';
+                                    position: absolute;
+                                    top: -50%;
+                                    left: -60%;
+                                    width: 20%;
+                                    height: 200%;
+                                    background: rgba(255, 255, 255, 0.3);
+                                    transform: rotate(30deg);
+                                    transition: none;
+                                    animation: shimmer 3s infinite;
+                                }
+
+                                @keyframes shimmer {
+                                0% { left: -60%; }
+                                100% { left: 130%; }
+                                }
+                                </style>
+
+                                <h1 class="hero-title"><span class="highlight">Wins&Profits:</span> Elevating Your Trading Journey</h1>
+                                <p class="hero-description" style="margin-bottom: 35px; color: #94a3b8; font-size: 1.1rem;">
+                                    We provide elite trading insights and professional guidance to help you navigate the financial markets. Partner with our trusted affiliates to start maximizing your portfolio today.
+                                </p>
 
                                 <div class="hero-actions">
-                                    <a href="https://t.me/winsandprofitshub" target="_blank" class="btn-telegram" style="
-                                        text-decoration: none; display: inline-flex; align-items: center; gap: 12px; background-color: #24A0DF; color: #ffffff; padding: 14px 28px; border-radius: 8px; font-weight: 800; 
-                                        text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 10px 20px rgba(36, 160, 223, 0.2); " 
-                                        onmouseover="this.style.transform='translateY(-3px) scale(1.03)'; this.style.boxShadow='0 15px 30px rgba(36, 160, 223, 0.4)'; this.style.backgroundColor='#2ab5f7';" 
-                                        onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 20px rgba(36, 160, 223, 0.2)'; this.style.backgroundColor='#24A0DF';">
-                                        <i class="bi bi-telegram" style="font-size: 1.2rem;"></i> <span>Join the Inner Circle</span>
+                                    <a href="https://t.me/winsandprofitshub" target="_blank" class="btn-telegram btn-unmissable" style="
+                                        text-decoration: none; 
+                                        display: inline-flex; 
+                                        align-items: center; 
+                                        justify-content: center;
+                                        gap: 10px; 
+                                        background: linear-gradient(135deg, #24A0DF 0%, #0088cc 100%); 
+                                        color: #ffffff; 
+                                        padding: 16px 25px; /* Slightly reduced padding for mobile fit */
+                                        border-radius: 50px; 
+                                        font-weight: 900; 
+                                        text-transform: uppercase; 
+                                        letter-spacing: 1px; 
+                                        font-size: clamp(0.75rem, 3vw, 0.9rem); /* Font shrinks automatically on small screens */
+                                        white-space: nowrap; /* Forces everything onto one line */
+                                        transition: all 0.4s ease; 
+                                        border: 2px solid rgba(255,255,255,0.1);
+                                        box-shadow: 0 10px 25px rgba(36, 160, 223, 0.4);
+                                        width: fit-content;
+                                        max-width: 100%;
+                                        ">
 
-                                        <div style=" background: rgba(255,255,255,0.2); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; margin-left: 5px; "> FREE SIGNALS </div>
+                                        <i class="bi bi-telegram" style="font-size: 1.2rem; flex-shrink: 0;"></i> 
+
+                                        <span style="flex-shrink: 0;">Inner Circle</span>
+
+                                        <div style=" 
+                                            background: #fff; 
+                                            color: #0088cc; 
+                                            padding: 2px 8px; 
+                                            border-radius: 50px; 
+                                            font-size: 0.65rem; 
+                                            font-weight: 900; 
+                                            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                                            flex-shrink: 0;
+                                            "> 
+                                            FREE SIGNALS 
+                                        </div>
                                     </a>
                                 </div>
-
                             </div>
                         </div>
 
@@ -199,7 +264,7 @@
                 </div>
             </section>
 
-            <section id="about" class="about section" style="background: #0a0a0a; color: #fff; padding: 80px 0;">
+            <section id="about" class="about section" style="background: ; color: #fff; padding: 80px 0;">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -228,9 +293,20 @@
                                     </p>
                                 </div>
 
-                                <p class="">We recommend Deriv as our primary partner because they offer a unique trading environment that is inaccessible through traditional brokers.</p>
+                                <p class="lead-text">We recommend Deriv as our primary partner because they offer a unique trading environment that is inaccessible through traditional brokers.</p>
 
-                                <p class="">Whether you are trading 24/7 Synthetic Indices (Volatility, Crash/Boom) or standard Forex pairs, Deriv provides the lowest spreads and lightning-fast execution. With over 20 years of market presence, they offer the security and reliability required for the Wins&Profits strategy to succeed.</p>
+                                <p class="lead-text">Whether you are trading 24/7 Synthetic Indices (Volatility, Crash/Boom) or standard Forex pairs, Deriv provides the lowest spreads and lightning-fast execution. With over 20 years of market presence, they offer the security and reliability required for the Wins&Profits strategy to succeed.</p>
+
+                                <a href="https://track.deriv.be/_aZPvfziYVLg5TVC3w-F7AGNd7ZgqdRLk/1/?fbclid=PAZXh0bgNhZW0CMTEAAaf6CIosls7uqHjVPmD4hSjqJmTzAQin9wlmpjS5Aj-u5OwwCtqw5JKl4gOoVw_aem_ajDELZga0OTYTcfzN1Uvyg" 
+                                    class="btn btn-cta" 
+                                    onmouseover="this.style.transform='scale(1.05) translateY(-3px)'; this.style.borderRadius='15px 40px'; this.style.backgroundColor='#111111'; this.style.boxShadow='0 20px 40px rgba(254, 68, 78, 0.3)';" 
+                                    onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.borderRadius='8px'; this.style.backgroundColor='#FE444E'; this.style.boxShadow='0 10px 20px rgba(254, 68, 78, 0.2)';"
+                                    style="
+                                    background: #FE444E; color: #ffffff; padding: 16px 42px; border-radius: 8px; text-decoration: none; font-weight: 900; border: 2px solid #FE444E; box-shadow: 0 10px 20px rgba(254, 68, 78, 0.2); 
+                                    display: inline-flex; align-items: center; gap: 10px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.95rem; "> 
+                                    <span>Start Trading Synthetics</span>
+                                    <i class="bi bi-graph-up-arrow" style="font-size: 1.1rem;"></i>
+                                </a>
 
                             </div>
                         </div>
